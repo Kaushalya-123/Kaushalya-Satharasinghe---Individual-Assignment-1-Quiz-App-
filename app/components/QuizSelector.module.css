@@ -1,0 +1,85 @@
+.selectorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.categorySelector {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: all 0.3s ease;
+}
+
+.categorySelector:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.2);
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+.startButton, .randomButton {
+  padding: 0.85rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.startButton {
+  background-color: var(--primary);
+  color: var(--button-text);
+  box-shadow: 0 4px 6px rgba(107, 70, 193, 0.2);
+}
+
+.startButton:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(107, 70, 193, 0.3);
+}
+
+.startButton:disabled {
+  background-color: var(--border);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.randomButton {
+  background-color: var(--accent);
+  color: var(--button-text);
+  box-shadow: 0 4px 6px rgba(237, 137, 54, 0.2);
+}
+
+.randomButton:hover {
+  background-color: #dd6b20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(237, 137, 54, 0.3);
+}
+
+@media (min-width: 768px) {
+  .buttonGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
